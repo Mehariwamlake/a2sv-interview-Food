@@ -1,57 +1,29 @@
-:root {
-  --bg: #0f172a;
-  --card: #0b1220;
-  --muted: #94a3b8;
-  --accent: #60a5fa;
-  --white: #f8fafc;
+:root{
+  --container-width: 1024px;
 }
-
-html, body, #__next {
-  height: 100%;
-  margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: #f3f4f6;
-  color: #111827;
-}
-
-.container {
-  max-width: 960px;
-  margin: 32px auto;
-  padding: 16px;
-}
-
-.card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  padding: 16px;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.table th, .table td {
-  padding: 8px 12px;
-  text-align: left;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.button {
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-.button.danger {
-  background: #ef4444;
-  color: white;
-}
-
-.input {
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
-}
+*{box-sizing:border-box}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0}
+.container{max-width:var(--container-width);margin:0 auto;padding:1rem}
+.restaurant-header{background:#111;color:white;padding:1rem}
+.restaurant-heading{margin:0;font-size:1.4rem}
+.restaurant-sub{margin:0.25rem 0 0;color:#ddd}
+.restaurant-footer{margin-top:2rem;padding:1rem;border-top:1px solid #eee}
+.restaurant-controls{display:flex;gap:1rem;align-items:center;margin:1rem 0}
+.restaurant-input{padding:0.5rem;border:1px solid #ccc;border-radius:6px}
+.restaurant-btn{padding:0.5rem 1rem;border-radius:6px;border:none;background:#0b6;cursor:pointer}
+.restaurant-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.restaurant-card{background:white;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.06);overflow:hidden;transition:transform .15s ease-out}
+.restaurant-card:hover{transform:translateY(-4px)}
+.restaurant-image{width:100%;height:140px;object-fit:cover}
+.restaurant-body{padding:0.75rem}
+.restaurant-name{margin:0;font-size:1.1rem}
+.restaurant-rating,.restaurant-status{margin:0.25rem 0;color:#555}
+.restaurant-actions{display:flex;gap:0.5rem;margin-top:0.5rem}
+.restaurant-edit{background:#0af;color:white;border:none;padding:0.4rem 0.6rem;border-radius:6px}
+.restaurant-delete{background:#f55;color:white;border:none;padding:0.4rem 0.6rem;border-radius:6px}
+.empty-state-message{padding:2rem;text-align:center;color:#666}
+.modal-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);padding:1rem}
+.modal{background:white;padding:1rem;border-radius:8px;width:100%;max-width:480px}
+.modal-actions{display:flex;justify-content:flex-end;gap:0.5rem;margin-top:1rem}
+.error{color:#b22;font-size:0.9rem}
+.restaurant-loading{padding:2rem;text-align:center}

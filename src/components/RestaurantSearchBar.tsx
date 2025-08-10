@@ -1,0 +1,14 @@
+'use client'
+import React from 'react'
+
+type Props = { value: string; onChange: (v: string) => void; onRefresh: () => void }
+
+export default function RestaurantSearchBar({ value, onChange, onRefresh }: Props) {
+  return (
+    <div className="restaurant-searchbar">
+      <label htmlFor="restaurant-search" className="sr-only">Search restaurants</label>
+      <input id="restaurant-search" name="restaurant_search" placeholder="Enter restaurant name" value={value} onChange={(e) => onChange(e.target.value)} className="restaurant-input" />
+      <button className="restaurant-btn" onClick={onRefresh} aria-label="Refresh">Refresh</button>
+    </div>
+  )
+}
