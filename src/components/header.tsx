@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaMotorcycle, FaShoppingBag } from 'react-icons/fa';
 import RestaurantSearchBar from './RestaurantSearchBar'; // update the path if needed
+import Image from 'next/image';
 
 interface HeaderProps {
   query: string;
@@ -9,12 +10,12 @@ interface HeaderProps {
   setShowAdd: (value: boolean) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ query, setQuery, fetchFoods ,setShowAdd }) => {
+const Header: React.FC<HeaderProps> = ({ query, setQuery ,setShowAdd }) => {
   return (
     <header className="hero">
       {/* Top Nav */}
       <div className="hero-navbar">
-        <div className="hero-logo">🍜 <span>FoodWagen</span></div>
+        <div className="hero-logo">🍜 <span>Food</span> Wagen</div>
         <button className="hero-add-button" onClick={() => setShowAdd(true)}>Add Meal</button>
       </div>
 
@@ -36,14 +37,14 @@ const Header: React.FC<HeaderProps> = ({ query, setQuery, fetchFoods ,setShowAdd
             <RestaurantSearchBar
               value={query}
               onChange={(value: string) => setQuery(value)}
-              onRefresh={fetchFoods}
+           
             />
           </div>
         </div>
 
         {/* Right Column */}
         <div className="hero-right">
-          <img src="/food_pic.png" alt="Food" className="hero-image" />
+          <Image src="/food1.png" alt="Food" className="hero-image" />
         </div>
       </div>
     </header>

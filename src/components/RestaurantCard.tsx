@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Food } from '@/types/Food';
+import Image from 'next/image';
 
 export default function RestaurantCard({
   food,
@@ -16,8 +17,8 @@ export default function RestaurantCard({
       className="restaurant-card border rounded p-3 shadow-md flex flex-col gap-2"
       data-testid={`restaurant-card-${food.id}`}
     >
-      <img
-        src={food.image}
+      <Image
+        src={food.image ?? '/default-image.jpg'}
         alt={food.name}
         className="restaurant-image w-full h-40 object-cover rounded"
       />

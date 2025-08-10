@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
 
-type Props = { value: string; onChange: (v: string) => void; onRefresh: () => void }
+type Props = { value: string; onChange: (v: string) => void; }
 
-export default function RestaurantSearchBar({ value, onChange, onRefresh }: Props) {
+export default function RestaurantSearchBar({ value, onChange }: Props) {
   return (
     <div className="restaurant-searchbar">
       <label htmlFor="restaurant-search" className="sr-only">Search restaurants</label>

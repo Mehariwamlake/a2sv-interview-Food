@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import useFoods from '@/hooks/useFoods'
 import RestaurantCard from '@/components/RestaurantCard'
-import RestaurantSearchBar from '@/components/RestaurantSearchBar'
 import RestaurantFormModal from '@/components/RestaurantFormModal'
 import DeleteConfirmModal from '@/components/DeleteConfirmModal'
 import { Food } from '@/types/Food'
@@ -44,8 +43,8 @@ export default function Page() {
           initial={selected}
           onClose={() => { setShowAdd(false); setSelected(null) }}
           onSave={async (payload) => {
-            if (payload.id) await updateFood(payload as any)
-            else await createFood(payload as any)
+            if (payload.id) await updateFood(payload as Food)
+            else await createFood(payload as Food)
             setShowAdd(false)
             setSelected(null)
           }}
@@ -56,7 +55,7 @@ export default function Page() {
         <DeleteConfirmModal
           onClose={() => { setShowDelete(false); setSelected(null) }}
           onConfirm={async () => {
-            await deleteFood((selected as any).id)
+            await deleteFood((selected as Food).id)
             setShowDelete(false)
             setSelected(null)
           }}
