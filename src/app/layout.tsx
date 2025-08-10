@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 
 
@@ -17,8 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <h1 style={{marginBottom: 12}}>User Mangenment</h1>
-        {children}
+        
+        <main className="container">{children}</main>
+        <Footer/>
       </body>
     </html>
   );

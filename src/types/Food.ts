@@ -1,5 +1,5 @@
 export interface Food {
-    
+
     id: string;
     name: string;
     description?: string;
@@ -9,6 +9,7 @@ export interface Food {
     open?: boolean;
     logo?: string;
     createdAt?: string;
+    status?: 'Open' | 'Closed';
 
 }
 
