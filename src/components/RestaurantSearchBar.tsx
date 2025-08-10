@@ -8,7 +8,7 @@ export default function RestaurantSearchBar({ value, onChange, onRefresh }: Prop
     <div className="restaurant-searchbar">
       <label htmlFor="restaurant-search" className="sr-only">Search restaurants</label>
       <input id="restaurant-search" name="restaurant_search" placeholder="Enter restaurant name" value={value} onChange={(e) => onChange(e.target.value)} className="restaurant-input" />
-      <button className="restaurant-btn" onClick={onRefresh} aria-label="Refresh">Refresh</button>
+      <button className="restaurant-btn"  aria-label="Refresh">Find Meal</button>
     </div>
   )
 }

@@ -6,15 +6,16 @@ interface HeaderProps {
   query: string;
   setQuery: (value: string) => void;
   fetchFoods: () => void;
+  setShowAdd: (value: boolean) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ query, setQuery, fetchFoods }) => {
+const Header: React.FC<HeaderProps> = ({ query, setQuery, fetchFoods ,setShowAdd }) => {
   return (
     <header className="hero">
       {/* Top Nav */}
       <div className="hero-navbar">
         <div className="hero-logo">🍜 <span>FoodWagen</span></div>
-        <button className="hero-add-button">Add Meal</button>
+        <button className="hero-add-button" onClick={() => setShowAdd(true)}>Add Meal</button>
       </div>
 
       {/* Hero Content */}
@@ -42,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ query, setQuery, fetchFoods }) => {
 
         {/* Right Column */}
         <div className="hero-right">
-          <img src="/noodles.jpeg" alt="Food" className="hero-image" />
+          <img src="/food_pic.png" alt="Food" className="hero-image" />
         </div>
       </div>
     </header>

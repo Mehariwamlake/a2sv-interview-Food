@@ -19,11 +19,11 @@ export default function Page() {
 
   return (
     <section className="restaurant-page">
-       <Header query={query} setQuery={setQuery} fetchFoods={fetchFoods} />
-      <div className="restaurant-controls">
+       <Header query={query} setQuery={setQuery} fetchFoods={fetchFoods} setShowAdd={setShowAdd} />
+      
         
-        <button className="restaurant-btn" onClick={() => setShowAdd(true)}>Add Food</button>
-      </div>
+       <h1 className=''>Featured Meals</h1>
+      
 
       {loading ? (
         <div className="restaurant-loading">Loading...</div>
